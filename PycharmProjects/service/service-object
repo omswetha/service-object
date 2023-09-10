@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: service
+metadata:
+  name: om
+spec:
+  type: nodeport
+  ports:
+    - targetPort: 80
+      port: 80
+      hostport: 30008
+  selector:
+    author: om
+    type: proxy
